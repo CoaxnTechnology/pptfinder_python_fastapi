@@ -22,7 +22,7 @@ class CheckKeywordResponse(BaseModel):
 # ----------------------------
 class SaveDataRequest(BaseModel):
     keyword: str
-    object: Dict[str, Any]
+    object: List[Dict[str, Any]]
 
 
 # ----------------------------
@@ -32,7 +32,7 @@ class SaveDataResponse(BaseModel):
     saved: bool
     message: str
     keyword: str
-    object: Dict[str, Any]
+    object: List[Dict[str, Any]]
 
 # =====================================================
 # SAVE DATA API
@@ -59,3 +59,4 @@ class CategoryItem(BaseModel):
 class CategoryResponse(BaseModel):
     status: str
     data: List[CategoryItem]
+
